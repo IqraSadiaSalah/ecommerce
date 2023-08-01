@@ -10,7 +10,7 @@ import { BiSearch } from "react-icons/bi";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import Logo from "/public/logo.png";
+import Logo from "/public/Logo.png";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "/public/logo.png";
+import Logo from "/public/Logo.png";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { GrFacebookOption, GrInstagram } from "react-icons/gr";
 
