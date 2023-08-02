@@ -18,9 +18,9 @@ async function addProduct(
   try {
     const response = await fetch("/api/cart", {
       body: JSON.stringify({ product_id: product_id, quantity: count }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+      // headers: {
+      //   "Content-Type": "application/json",
+      // },
       method: "POST",
     });
     if (!response.ok) {
