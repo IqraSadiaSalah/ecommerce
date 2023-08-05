@@ -144,7 +144,7 @@ export function Header() {
                 <NavigationMenuItem className="pl-10">
                   <Link href={"/cart"} onClick={() => setNavbar(false)}>
                     <button className="my-3 md:my-2 relative bg-gray-200 text-black hover:bg-gray-300 hover:text-black rounded-full p-2.5">
-                      <AiOutlineShoppingCart className="text-xl" />
+                      <AiOutlineShoppingCart className="text-xl px-10" />
                       {cartValue != 0 && (
                         <span className="absolute top-0.5 -right-2 bg-[#F02D34] text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                           <p>{cartValue}</p>
