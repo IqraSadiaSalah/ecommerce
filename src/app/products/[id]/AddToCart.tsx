@@ -9,30 +9,38 @@ import { Button } from "@/components/ui/button";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { cartActions } from "@/store/slice/cartSlice";
 
+import { Dispatch } from "redux";
+
+// ... (existing code)
+
 async function addProduct(
   product_id: string,
   count: number,
-  setShowAlert: any,
-  dispatch: any
+  setShowAlert: React.Dispatch<React.SetStateAction<boolean>>,
+  dispatch: Dispatch<any>
 ) {
   try {
-    const response = await fetch("/api/cart", {
+    const response = await fetch(`/api/cart`, {
       body: JSON.stringify({ product_id: product_id, quantity: count }),
-      // headers: {
-      //   "Content-Type": "application/json",
-      // },
+      headers: {
+        "Content-Type": "application/json",
+      },
       method: "POST",
     });
+
     if (!response.ok) {
-      throw new Error("Something went wrong");
+      throw new Error(`Server responded with status ${response.status}`);
     } else {
       setShowAlert(true);
       dispatch(cartActions.addToCart({ product_id, count }));
     }
-  } catch (e) {
-    console.log(e);
+  } catch (e: any) {
+    console.log("Error adding product to cart:", e.message);
   }
 }
+
+
+
 const AddToCart = ({
   product_id,
   product_price,
