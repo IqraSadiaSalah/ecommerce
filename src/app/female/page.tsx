@@ -39,7 +39,7 @@ const page = async () => {
                   alt="Logo"
                   width={300}
                   height={300}
-                  className="w-full h-full max-h-64 md:max-h-64 object-cover object-top"
+                  className="w-full h-full max-h-64 md:max-h-64 object-cover object-top max-lg:object-cover"
                 />
                 <h2 className="font-bold tracking-wider leading-6 mt-2">
                   {item.title}
