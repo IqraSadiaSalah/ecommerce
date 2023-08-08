@@ -163,11 +163,11 @@ export function Header() {
                         dispatch(cartActions.reset());
                       }}
                     >
-                      Sign out
+                      SignOut
                     </button>
                   ) : (
                     <Link href={"/sign-in"} className="underline">
-                      Sign in
+                      SignIn
                     </Link>
                   )}
                 </NavigationMenuItem>
