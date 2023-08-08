@@ -1,13 +1,8 @@
-
-
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/drizzle";
 import { cart } from "@/db/schema/cart";
 import { eq, and } from "drizzle-orm";
 import { getAuth } from "@clerk/nextjs/server";
-import { request } from "http";
-import { uuid } from "drizzle-orm/pg-core";
-import { cookies } from "next/dist/client/components/headers";
 
 export async function PUT(req: NextRequest) {
     const body = await req.json();
@@ -59,7 +54,6 @@ export async function PATCH(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
     const body = await req.json();
-  
 
     let { userId: user_id } = getAuth(req);
     console.log(user_id, body.product_id, body.quantity)
@@ -67,7 +61,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ "error": "User not logged in" });
     } else {
         try {
-
             const productExists = await db.select().from(cart).where(and(eq(cart.product_id, body.product_id), (eq(cart.user_id, user_id))));
             if (productExists[0] == undefined) {
                 const res = await db.insert(cart).values({ product_id: body.product_id, user_id: user_id, quantity: body.quantity }).returning();
