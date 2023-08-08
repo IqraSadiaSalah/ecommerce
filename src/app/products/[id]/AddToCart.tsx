@@ -16,8 +16,8 @@ import { Dispatch } from "redux";
 async function addProduct(
   product_id: string,
   count: number,
-  setShowAlert: React.Dispatch<React.SetStateAction<boolean>>,
-  dispatch: Dispatch<any>
+  setShowAlert: any,
+  dispatch: any
 ) {
   try {
     const response = await fetch(`/api/cart`, {
@@ -27,19 +27,16 @@ async function addProduct(
       },
       method: "POST",
     });
-
     if (!response.ok) {
-      throw new Error(`Server responded with status ${response.status}`);
+      throw new Error("Something went wrong");
     } else {
       setShowAlert(true);
       dispatch(cartActions.addToCart({ product_id, count }));
     }
-  } catch (e: any) {
-    console.log("Error adding product to cart:", e.message);
+  } catch (e) {
+    console.log(e);
   }
 }
-
-
 
 const AddToCart = ({
   product_id,
