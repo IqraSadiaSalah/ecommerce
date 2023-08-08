@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
 
-
 export const fetchProducts = createAsyncThunk('products/fetch', async (userId) => {
     const response = await fetch(`/api/cart?user_id=${userId}`);
     const data = await response.json();
@@ -11,7 +10,6 @@ export const fetchProducts = createAsyncThunk('products/fetch', async (userId) =
     return newArray;
 });
 
-  
 export interface CounterState {
     products: Array<any>;
     totalQuanty: number;
