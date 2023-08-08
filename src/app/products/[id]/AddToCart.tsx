@@ -20,7 +20,7 @@ async function addProduct(
   dispatch: any
 ) {
   try {
-    const response = await fetch(`/aapi/cart`, {
+    const response = await fetch(`/api/cart`, {
       body: JSON.stringify({ product_id: product_id, quantity: count }),
       headers: {
         "Content-Type": "application/json",
