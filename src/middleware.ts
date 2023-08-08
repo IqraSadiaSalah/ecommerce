@@ -4,5 +4,5 @@ export default authMiddleware({});
 
 export const config = {
   // matcher: ["/success", "/api/cart"],
-  matcher: ["/api/cart"],
+  matcher: ["/app/api/cart"],
 };
