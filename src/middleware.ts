@@ -5,4 +5,5 @@ export default authMiddleware({});
 export const config = {
   // matcher: ["/success", "/api/cart"],
   matcher: ["/api/cart"],
+  runtime: "experimental-edge",
 };
