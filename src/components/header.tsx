@@ -132,7 +132,7 @@ export function Header() {
                     </Button>
                     <Input
                       type="text"
-                      placeholder="What you looking for"
+                      placeholder="Looking for ? "
                       className="border-none h-6"
                       onChange={(e) => {
                         push(`/search?name=${e.target.value}`);
