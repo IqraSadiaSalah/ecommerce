@@ -5,9 +5,6 @@ import { eq, and } from "drizzle-orm";
 import { getAuth } from "@clerk/nextjs/server";
 
 
-export const config = {
-    runtime: 'edge',
-  }
 
 export async function PUT(req: NextRequest) {
     const body = await req.json();
