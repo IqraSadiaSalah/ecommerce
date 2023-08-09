@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
 
-export const fetchProducts = createAsyncThunk('/products/fetch', async (userId) => {
+export const fetchProducts = createAsyncThunk('products/fetch', async (userId) => {
     const response = await fetch(`/api/cart?user_id=${userId}`);
     const data = await response.json();
     const newArray = data.map((item: any) => ({
