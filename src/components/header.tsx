@@ -48,7 +48,7 @@ export function Header() {
 
   return (
     <div className="w-full">
-      <NavigationMenu className="flex justify-between items-center py-6 px-28">
+      <NavigationMenu className="pt-8">
         <div className="px-6 md:items-center md:flex w-full md:w-fit justify-between">
           <div className="flex items-center py-3">
             <div className="w-full">
@@ -60,10 +60,10 @@ export function Header() {
                 </NavigationMenuItem>
                 <div className="md:hidden">
                   <button
-                    className="p-9  text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                    className="p-2  text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                     onClick={() => setNavbar(!navbar)}
                   >
-                    {navbar ? (
+                     {navbar ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-6 h-6 text-black"
@@ -98,41 +98,41 @@ export function Header() {
             </div>
           </div>
 
-          <div>
+         <div>
             <div
               className={`h-[90vh] md:h-fit w-full flex justify-center items-center pb-4 mt-4 md:block md:pb-0 md:mt-0 ${
                 navbar ? "block" : "hidden"
               }`}
             >
               <NavigationMenuList className="flex-col md:flex-row px-10 flex-shrink">
-                <NavigationMenuItem className="">
+                <NavigationMenuItem>
                   <Link href={"/female"} onClick={() => setNavbar(false)}>
-                    <p className="my-1 md:my-0 pl-10">Female</p>
+                    <p className="my-1 md:my-0">Female</p>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href={"/male"} onClick={() => setNavbar(false)}>
-                    <p className="my-1 md:my-0 pl-10">Male</p>
+                    <p className="my-1 md:my-0">Male</p>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href={"/kids"} onClick={() => setNavbar(false)}>
-                    <p className="my-1 md:my-0 pl-10">Kids</p>
+                    <p className="my-1 md:my-0">Kids</p>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href={"/products"} onClick={() => setNavbar(false)}>
-                    <p className="mt-1 mb-2 md:my-0 pl-10">All Products</p>
+                    <p className="mt-1 mb-2 md:my-0">All Products</p>
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className=" pl-10">
-                  <div className="flex border rounded-lg border-black h-8 items-center ">
+                <NavigationMenuItem>
+                  <div className="flex border rounded-lg border-black h-8 items-center">
                     <Button className="bg-white text-black hover:bg-white hover:text-black h-6 pr-1.5 mr-0">
                       <BiSearch />
                     </Button>
                     <Input
                       type="text"
-                      placeholder="Looking for ? "
+                      placeholder="What you looking for"
                       className="border-none h-6"
                       onChange={(e) => {
                         push(`/search?name=${e.target.value}`);
@@ -141,10 +141,10 @@ export function Header() {
                   </div>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem className="pl-10">
+                <NavigationMenuItem>
                   <Link href={"/cart"} onClick={() => setNavbar(false)}>
-                    <button className="my-3 md:my-2 relative bg-gray-200 text-black hover:bg-gray-300 hover:text-black rounded-full p-2.5">
-                      <AiOutlineShoppingCart className="text-xl " />
+                    <button className="my-3 md:my-0 relative bg-gray-200 text-black hover:bg-gray-300 hover:text-black rounded-full p-2.5">
+                      <AiOutlineShoppingCart className="text-xl" />
                       {cartValue != 0 && (
                         <span className="absolute top-0.5 -right-2 bg-[#F02D34] text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                           <p>{cartValue}</p>
@@ -154,7 +154,7 @@ export function Header() {
                   </Link>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem className="pl-10">
+                <NavigationMenuItem>
                   {user ? (
                     <button
                       className="underline"
@@ -163,11 +163,11 @@ export function Header() {
                         dispatch(cartActions.reset());
                       }}
                     >
-                      Sign Out
+                      Sign out
                     </button>
                   ) : (
                     <Link href={"/sign-in"} className="underline">
-                      Sign In
+                      Sign in
                     </Link>
                   )}
                 </NavigationMenuItem>
