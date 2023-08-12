@@ -21,6 +21,7 @@ import { useAuth } from "@clerk/nextjs";
 import { cartActions, fetchProducts } from "@/store/slice/cartSlice";
 
 export function Header() {
+  alert("Please Sign In before you purchase anything");
   const cartValue = useSelector(
     (state: RootState) => state.cartSlice.totalQuanty
   );
