@@ -46,8 +46,6 @@ export function Header() {
     }
   }, [dispatch, user_id]);
 
-  
-  alert("Please Sign In before you purchase anything");
 
   return (
     <div className="w-full pl-14">
