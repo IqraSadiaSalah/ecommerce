@@ -21,7 +21,6 @@ import { useAuth } from "@clerk/nextjs";
 import { cartActions, fetchProducts } from "@/store/slice/cartSlice";
 
 export function Header() {
-  alert("Please Sign In before you purchase anything");
   const cartValue = useSelector(
     (state: RootState) => state.cartSlice.totalQuanty
   );
@@ -46,6 +45,9 @@ export function Header() {
       dispatch(fetchProducts(user_id));
     }
   }, [dispatch, user_id]);
+
+  
+  alert("Please Sign In before you purchase anything");
 
   return (
     <div className="w-full pl-14">
