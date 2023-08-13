@@ -241,7 +241,7 @@ const SubComp = ({ user_id }: { user_id: string }) => {
             })}
 
             <div>
-              <h2 className="text-right">Total: Rs {total}</h2>
+              <h2 className="text-right">Total: Rs. {total}</h2>
             </div>
             <Checkout products={allcartData} />
           </>
