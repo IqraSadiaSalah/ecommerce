@@ -114,7 +114,7 @@ const HomeSlider = () => {
                     className="object-cover object-top max-h-64"
                   />
                   <h2 className="font-bold pt-3">{data[index].title}</h2>
-                  <h2 className="font-bold">Rs {data[index].price}</h2>
+                  <h2 className="font-bold">Rs. {data[index].price}</h2>
                 </Link>
               </div>
             </div>
