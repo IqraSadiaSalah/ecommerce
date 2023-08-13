@@ -96,7 +96,7 @@ const HomeSlider = () => {
                       <h2 className="text-lg font-bold pt-3">
                         {data[i].title}
                       </h2>
-                      <h2 className="text-lg font-bold">Rs {data[i].price}</h2>
+                      <h2 className="text-lg font-bold">Rs. {data[i].price}</h2>
                     </Link>
                   </div>
                 );
