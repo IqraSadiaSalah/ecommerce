@@ -90,7 +90,7 @@ const AddToCart = ({
         </Button>
         {showAlert && <Alert message="Product added to cart" type="success" />}
 
-        <h2 className="text-2xl font-semibold px-4">Rs {product_price}</h2>
+        <h2 className="text-2xl font-semibold px-4">Rs. {product_price}</h2>
       </div>
     </>
   );
