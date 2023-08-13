@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
       <div className="w-full border-t-[1px] border-gray-600"></div>
       <div className="w-full flex justify-around mx-5 items-center pt-8">
-        <p className=" max-w-[10rem] leading-6">Copyright © 2022 Dine Market</p>
+        <p className=" max-w-[10rem] leading-6">Copyright © 2023 Dine Market</p>
         <p className=" max-w-[10rem] leading-6">
           Design by. <span className="font-bold">Weird Design Studio</span>
         </p>
