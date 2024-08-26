@@ -4,7 +4,7 @@ ECOMMERCE HACHKTON WEBSITE
 
 npm run dev
 yarn run dev
-
-https://ecommerce-hackhton.vercel.app/
+[
+https://ecommerce-hackathon-iqra.vercel.app/
 
 Panaverce Dao Project
